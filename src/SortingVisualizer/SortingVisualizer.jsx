@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SortingVisualizer.css';
 import BarSlider from './BarSlider';
-import { mergeSort } from './SortingAlgorithms';
+import {mergeSort} from './SortingAlgorithms';
 
 const SortingVisualizer = () => {
 
@@ -10,6 +10,13 @@ const SortingVisualizer = () => {
 
     useEffect( () => { resetArray(barCount); }, [barCount]);
 
+    const handleMergeSort = () => {
+      const sortedArray = mergeSort(array);
+      console.log("Sorted Array:", sortedArray);
+      setArray(sortedArray)
+      };
+      
+
     const resetArray = (barCount) => {
       const newArray = [];
       for (let i = 0; i < barCount; i++) {
@@ -17,11 +24,6 @@ const SortingVisualizer = () => {
       }
       setArray(newArray);
 
-    const handleMergeSort = () => {
-      const sortedArray = mergeSort(array);
-      setArray(sortedArray);
-      };
-      
 
     };
 
