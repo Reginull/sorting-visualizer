@@ -1,0 +1,20 @@
+.array-container {
+    display: flex;
+    justify-content: center;
+    
+    align-items: flex-end;
+    position: absolute;
+    height: 100vh;
+    left: 10px;
+
+}
+
+.array-bar {
+    width: 5px;
+    height: 4px;
+    background-color: rgb(238, 114, 135);
+    margin: 0 2px;
+    display: inline-block;
+    color: transparent;
+}
+

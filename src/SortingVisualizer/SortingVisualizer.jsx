@@ -9,16 +9,16 @@ const SortingVisualizer = () => {
 
     const resetArray = () => {
         const newArray = [];
-        for (let i = 0; i < 100; i++) {
-            newArray.push(randomIntFromInterval(10, 1000));
+        for (let i = 0; i < 185; i++) {
+            newArray.push(randomIntFromInterval(10, 800));
         }
         setArray(newArray);
     };
 
     return (
-        <div>
+        <div className='array-container'>
           {array.map((value, index) => (
-            <div className="array-bar" key={index}>
+            <div className="array-bar" key={index} style={{height: `${value}px`}}>
               {value}
             </div>
           ))}
