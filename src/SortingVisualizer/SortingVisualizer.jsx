@@ -33,6 +33,7 @@ const SortingVisualizer = () => {
             ></div>
           ))}
         </div>
+        <button className='new-array-button' onClick={() => resetArray(barCount)}> Generate New Array </button>
       </div>
     );
 };

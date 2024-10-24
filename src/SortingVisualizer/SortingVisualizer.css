@@ -33,3 +33,13 @@
 
 }
 
+.new-array-button {
+    position: fixed;
+    z-index: 2;
+    top: 120px;
+    right: 55px;
+    padding: 20px;
+    width: 247px;
+
+}
+
