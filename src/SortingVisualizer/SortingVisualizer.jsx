@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SortingVisualizer.css';
 import BarSlider from './BarSlider';
+import { mergeSort } from './SortingAlgorithms';
 
 const SortingVisualizer = () => {
 
@@ -10,11 +11,18 @@ const SortingVisualizer = () => {
     useEffect( () => { resetArray(barCount); }, [barCount]);
 
     const resetArray = (barCount) => {
-        const newArray = [];
-        for (let i = 0; i < barCount; i++) {
-            newArray.push(randomIntFromInterval(10, 1000));
-        }
-        setArray(newArray);
+      const newArray = [];
+      for (let i = 0; i < barCount; i++) {
+          newArray.push(randomIntFromInterval(10, 1000));
+      }
+      setArray(newArray);
+
+    const handleMergeSort = () => {
+      const sortedArray = mergeSort(array);
+      setArray(sortedArray);
+      };
+      
+
     };
 
     return (
@@ -34,6 +42,9 @@ const SortingVisualizer = () => {
           ))}
         </div>
         <button className='new-array-button' onClick={() => resetArray(barCount)}> Generate New Array </button>
+        <div className='algorithm-button-container'>
+        <button className='algorithm-type-button' onClick={() => handleMergeSort()}> Merge Sort </button>
+        </div>
       </div>
     );
 };
