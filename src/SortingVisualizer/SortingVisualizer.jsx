@@ -80,7 +80,9 @@ const SortingVisualizer = () => {
     return (
       <div className="sorting-visualizer">
 
-        <h1 className='title'>Sorting Visualizer</h1>
+        <h1 className="title">Sorting Visualizer</h1>
+
+        <div className="transparent-bar"></div>
 
         <BarSlider barCount={barCount} setBarCount={setBarCount} />
     
