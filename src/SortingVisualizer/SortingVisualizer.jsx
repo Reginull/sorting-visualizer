@@ -80,6 +80,8 @@ const SortingVisualizer = () => {
     return (
       <div className="sorting-visualizer">
 
+        <h1 className='title'>Sorting Visualizer</h1>
+
         <BarSlider barCount={barCount} setBarCount={setBarCount} />
     
         <div className="array-container">
@@ -96,6 +98,9 @@ const SortingVisualizer = () => {
         <button className='new-array-button' onClick={() => resetArray(barCount)}> Generate New Array </button>
         <div className='algorithm-button-container'>
         <button className='algorithm-type-button' onClick={() => animateMergeSort()}> Merge Sort </button>
+        <button className='algorithm-type-button'> Quick Sort </button>
+        <button className='algorithm-type-button'> Insertion Sort </button>
+        <button className='algorithm-type-button'> Bubble Sort </button>
         </div>
       </div>
     );

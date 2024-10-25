@@ -1,4 +1,12 @@
 
+.title {
+    position: static;
+    font-size: 30px;
+    margin-bottom: 750px;
+    margin-left: 40px;
+
+}
+
 .array-container {
     display: flex;
     justify-content: center;
@@ -45,18 +53,17 @@
 }
 
 .algorithm-button-container {
-    position: relative;
+    position: fixed;
     display: flex;
-    margin-top: -20px;
-    top: -385px;
-    left: 350px;
-    
+    right: 360px;
+    top: 48px;
+    z-index: 400;
 }
 
 .algorithm-type-button {
 
     width: 170px;
-    margin: 0 20px;
+    margin: 0 25px;
     line-height: 40px;
-    z-index: 400;
+    z-index: 500;
 }
